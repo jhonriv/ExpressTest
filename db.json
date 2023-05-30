@@ -1,0 +1,18 @@
+[
+  {
+    "username": "admin",
+    "password": "admin",
+    "role": "admin",
+    "users": ["Beto", "Juan", "Jose"]
+  },
+  { "username": "Beto", "password": "pass123", "role": "user", "users": [] },
+  { "username": "Juan", "password": "pass123", "role": "user", "users": [] },
+  {
+    "username": "Jose",
+    "password": "pass123",
+    "role": "manager",
+    "users": ["Valeria", "Juana"]
+  },
+  { "username": "Valeria", "password": "pass123", "role": "user", "users": [] },
+  { "username": "Juana", "password": "pass123", "role": "user", "users": [] }
+]
