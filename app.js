@@ -155,6 +155,12 @@ app.put("/user/:username", isAuth, (req, res) => {
   )
     return res.status(409).send({ message: "Username Already Exists" });
 
+  if (
+    userLogin.role === "manager" &&
+    !userLogin.users.includes(req.params.username)
+  )
+    return res.status(403).send({ message: "Forbidden operation" });
+
   let index = users.findIndex((user) => user.username === req.params.username);
   if (index === -1)
     return res.status(403).send({ message: "Forbidden operation" });
